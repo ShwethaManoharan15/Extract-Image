@@ -1,0 +1,24 @@
+
+<router-outlet>
+  <div class="title">
+    <h1>Image 2 Text Editor</h1>
+  </div>
+  <hr>
+  <div class="all">
+    <h2><u>Upload Image:</u></h2>
+  <div class="upload-section">
+    
+    <input type="file" (change)="onFileSelected($event)" style="font-size:medium;">
+  
+    <button (click)="extractText()" style="padding: 10px;" class="button">Extract Text</button>
+  </div>
+  
+  
+  <div *ngIf="extractedText">
+    <h2><u>Extracted Text:</u></h2>
+    <div class="text">
+    <p  class="output">{{ extractedText }}</p>
+  </div>
+  </div>
+  </div>
+</router-outlet>
